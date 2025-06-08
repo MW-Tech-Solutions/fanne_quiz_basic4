@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>FANNE MEMORIAL ACADEMY QUIZ</h1>
+            <div class="timer">Time left: <span id="timer">10:00</span></div>
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <!-- Subject Selection -->
+        <div id="subject-selection" class="panel">
+            <h2>Select Subject</h2>
+            <select id="subject">
+                <option value="english">English Language</option>
+                <option value="maths">Mathematics</option>
+                <option value="basic_science">Basic Science</option>
+                <option value="agric_science">Agriculture Science</option>
+                <option value="citizenship">Citizenship Education</option>
+            </select>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Interface -->
+        <div id="quiz" class="panel hidden">
+            <div id="question">
+                <p class="question-text"></p>
+                <div class="options"></div>
+            </div>
+            <button onclick="nextQuestion()" class="next-btn">Next Question</button>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="panel hidden">
+            <h2>Quiz Results</h2>
+            <p id="score"></p>
+            <div id="answer-breakdown"></div>
+            <button onclick="resetQuiz()" class="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
